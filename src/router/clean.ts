@@ -1,6 +1,6 @@
 import {
   createRouter,
-  createWebHashHistory,
+  createWebHistory,
   type RouteRecordRaw,
 } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
@@ -22,6 +22,15 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
           pageTitle: "Dashboard",
           breadcrumbs: ["Dashboards"],
+        },
+      },
+      {
+        path: "/open-account",
+        name: "open-account",
+        component: () => import("@/views/OpenAccount.vue"),
+        meta: {
+          pageTitle: "openAccount",
+          breadcrumbs: ["openAccount"],
         },
       },
     ],
@@ -89,7 +98,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 

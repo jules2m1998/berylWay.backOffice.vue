@@ -1,33 +1,15 @@
 <template>
-  <div class="card card-flush" :class="className">
+  <div class="card card-flush rounded-0" :class="className">
     <!--begin::Header-->
     <div class="card-header pt-5">
       <!--begin::Title-->
       <h3 class="card-title align-items-start flex-column">
-        <span class="card-label fw-bold text-dark">Highlights</span>
+        <span class="card-label fw-bold text-dark">Lorem</span>
         <span class="text-gray-400 mt-1 fw-semibold fs-6"
-          >Latest social statistics</span
+          >Lorem ipsum dolor sit</span
         >
       </h3>
       <!--end::Title-->
-
-      <!--begin::Toolbar-->
-      <div class="card-toolbar">
-        <!--begin::Menu-->
-        <button
-          class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-          data-kt-menu-trigger="click"
-          data-kt-menu-placement="bottom-end"
-          data-kt-menu-overflow="true"
-        >
-          <span class="svg-icon svg-icon-1">
-            <inline-svg src="/media/icons/duotune/general/gen023.svg" />
-          </span>
-        </button>
-        <Dropdown2 />
-        <!--end::Menu-->
-      </div>
-      <!--end::Toolbar-->
     </div>
     <!--end::Header-->
 
@@ -90,23 +72,11 @@ export default defineComponent({
   setup() {
     const items = [
       {
-        description: "Avg. Client Rating",
-        statistics: "7.8",
+        description: "Lorem ipsum",
+        statistics: "0.0",
         inc: true,
         number: "true",
-      },
-      {
-        description: "Instagram Followers",
-        statistics: "730k",
-        inc: false,
-        number: "false",
-      },
-      {
-        description: "Google Ads CPC",
-        statistics: "$2.09",
-        inc: true,
-        number: "false",
-      },
+      }
     ];
 
     return {

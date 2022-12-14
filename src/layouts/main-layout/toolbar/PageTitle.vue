@@ -56,12 +56,15 @@ import {
   pageTitleDirection,
 } from "@/core/helpers/config";
 import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "layout-page-title",
   components: {},
   setup() {
     const route = useRoute();
+
+    const { t } = useI18n();
 
     const pageTitle = computed(() => {
       return route.meta.pageTitle;

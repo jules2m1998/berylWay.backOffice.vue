@@ -1,83 +1,61 @@
 <template>
-  <!--begin::Row-->
-  <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
-    <!--begin::Col-->
-    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
-      <Widget1
-        className="h-md-50 mb-5 mb-xl-10"
-        description="Active Projects"
-        bgColor="#F1416C"
-        bgImage="/media/patterns/vector-1.png"
-      />
+  <div class="grid mb-5">
+    <Widget1 description="dolor sit amet consectetur" bgColor="#EF7B00" bgImage="/media/patterns/vector-1.png" />
 
-      <Widget2
-        className="h-md-50 mb-5 mb-xl-10"
-        :icon="false"
-        stats="357"
-        description="Professionals"
-        labelColor="dark"
-        textColor="gray-300"
-      />
-    </div>
-    <!--end::Col-->
+    <Widget3 />
 
-    <!--begin::Col-->
-    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
-      <Widget3 className="h-md-50 mb-5 mb-xl-10" :chartSize="70" />
+    <Widget2 :icon="false" stats="0" description="Lorem ipsum" labelColor="dark" textColor="gray-300" />
 
-      <Widget4 className="h-lg-50" />
-    </div>
-    <!--end::Col-->
-
-    <!--begin::Col-->
-    <div class="col-xxl-6">
-      <Widget5 className="h-md-100" />
-    </div>
-    <!--end::Col-->
+    <Widget4 />
   </div>
-  <!--end::Row-->
 
-  <!--begin::Row-->
-  <div class="row gx-5 gx-xl-10">
-    <!--begin::Col-->
-    <div class="col-xxl-6 mb-5 mb-xl-10">
-      <Widget6 className="h-xl-100" height="275px" />
+  <div class="row mb-5">
+    <div class="col-6">
+      <chart-filtered title="creditApplications" label="periodFilter" :data="creditApplicationChart" />
     </div>
-    <!--end::Col-->
-
-    <!--begin::Col-->
-    <div class="col-xl-6 mb-5 mb-xl-10">
-      <Widget7 className="h-xl-100" />
+    <div class="col-6">
+      <chart-filtered title="unboardingRequest" label="periodFilter" :data="unboardingRequestChart" />
     </div>
-    <!--end::Col-->
   </div>
-  <!--end::Row-->
 
   <!--begin::Row-->
   <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
-    <!--begin::Col-->
-    <div class="col-xxl-6">
-      <Widget8 className="h-xl-100" image="/media/stock/600x600/img-65.jpg" />
-    </div>
-    <!--end::Col-->
 
     <!--begin::Col-->
-    <div class="col-xl-6">
+    <div class="col-xl-4">
       <Widget9 className="h-lg-100" :height="300" />
     </div>
     <!--end::Col-->
+
+    <!--begin::Col-->
+    <div class="col-xl-8">
+      <Widget10 className="h-md-100" />
+    </div>
+    <!--end::Col-->
   </div>
-  <!--end::Row-->
 
   <!--begin::Row-->
   <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+
     <!--begin::Col-->
     <div class="col-xl-4">
-      <MixedWidget5
-        widget-classes="card-xl-stretch mb-xl-8 h-md-100"
-        chart-color="primary"
-        chart-height="150"
-      ></MixedWidget5>
+      <Widget9 className="h-lg-100" :height="300" />
+    </div>
+    <!--end::Col-->
+
+    <!--begin::Col-->
+    <div class="col-xl-8">
+      <Widget10 className="h-md-100" />
+    </div>
+    <!--end::Col-->
+  </div>
+
+  <!--begin::Row-->
+  <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+
+    <!--begin::Col-->
+    <div class="col-xl-4">
+      <Widget9 className="h-lg-100" :height="300" />
     </div>
     <!--end::Col-->
 
@@ -91,7 +69,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import Widget1 from "@/components/dashboard-default-widgets/Widget1.vue";
 import Widget2 from "@/components/dashboard-default-widgets/Widget2.vue";
 import Widget3 from "@/components/dashboard-default-widgets/Widget3.vue";
@@ -103,6 +81,7 @@ import Widget8 from "@/components/dashboard-default-widgets/Widget8.vue";
 import Widget9 from "@/components/dashboard-default-widgets/Widget9.vue";
 import Widget10 from "@/components/dashboard-default-widgets/Widget10.vue";
 import MixedWidget5 from "@/components/widgets/mixed/Widget5.vue";
+import ChartFiltered from "@/components/query/ChartFiltered.vue"
 
 export default defineComponent({
   name: "main-dashboard",
@@ -118,6 +97,48 @@ export default defineComponent({
     Widget9,
     Widget10,
     MixedWidget5,
+    ChartFiltered
   },
+  setup() {
+    const className = ref("mb-5 mb-xl-10 col-md-3")
+    const creditApplicationChart = ref([
+      {
+        name: 'Non traité',
+        data: [30, 40, 45, 50, 49, 60, 70, 91]
+      },
+      {
+        name: 'Traité',
+        data: [10, 20, 50, 20, 60, 10, 20, 40]
+      },
+    ]);
+    const unboardingRequestChart = ref([
+      {
+        name: 'series-1',
+        data: [10, 60, 50, 70, 23, 60, 70, 23]
+      },
+      {
+        name: 'series-2',
+        data: [5, 46, 50, 20, 60, 10, 20, 40]
+      },
+    ]);
+
+    return {
+      className,
+      creditApplicationChart,
+      unboardingRequestChart
+    }
+  }
 });
 </script>
+
+<style lang="scss" scoped>
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: .5rem;
+
+  @media screen and (max-width: 1226px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>

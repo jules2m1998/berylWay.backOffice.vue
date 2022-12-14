@@ -70,6 +70,21 @@ const messages = {
     subscriptionList: "Subscription List",
     addSubscription: "Add Subscription",
     viewSubscription: "View Subscription",
+
+    // My items
+    openAccount: "Account openings",
+    credit: "Credits",
+    agency: "Agencies",
+    complaint: "Complaints",
+    user: "Users",
+    question: "Questions",
+    creditApplications: "Credit applications",
+    unboardingRequest: "Unboarding request",
+    periodFilter: "Filter the period",
+    byMonht: "Per month",
+    byYear: "Per year",
+    byWeek: "Per week",
+    byDay: "Per day",
   },
   es: {
     dashboard: "Tablero",
@@ -350,6 +365,14 @@ const messages = {
     subscriptionList: "Liste D'Abonnement",
     addSubscription: "Ajouter Un Abonnement",
     viewSubscription: "Voir L'Abonnement",
+
+    // Mes éléments
+    openAccount: "Ouvertures de compte",
+    credit: "Crédits",
+    agency: "Agences",
+    complaint: "Plaintes",
+    user: "Utiliateurs",
+    question: "Questions",
   },
 };
 

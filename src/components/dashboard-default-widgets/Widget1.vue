@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end"
+    class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end rounded-0"
     :class="className"
     :style="{ backgroundColor: bgColor, backgroundImage: `url('${bgImage}')` }"
   >
@@ -9,7 +9,7 @@
       <!--begin::Title-->
       <div class="card-title d-flex flex-column">
         <!--begin::Amount-->
-        <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">69</span>
+        <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">00</span>
         <!--end::Amount-->
 
         <!--begin::Subtitle-->
@@ -29,8 +29,8 @@
         <div
           class="d-flex justify-content-between fw-bold fs-6 text-white opacity-50 w-100 mt-auto mb-2"
         >
-          <span>43 Pending</span>
-          <span>72%</span>
+          <span>00 Lorem</span>
+          <span>00%</span>
         </div>
 
         <div class="h-8px mx-3 w-100 bg-white bg-opacity-50 rounded">

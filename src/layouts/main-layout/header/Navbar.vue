@@ -1,42 +1,6 @@
 <template>
   <!--begin::Navbar-->
   <div class="app-navbar flex-shrink-0">
-    <!--begin::Search-->
-    <div class="app-navbar-item align-items-stretch ms-1 ms-lg-3">
-      <KTSearch />
-    </div>
-    <!--end::Search-->
-    <!--begin::Activities-->
-    <div class="app-navbar-item ms-1 ms-lg-3">
-      <!--begin::Drawer toggle-->
-      <div
-        class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-40px h-md-40px"
-        id="kt_activities_toggle"
-      >
-        <span class="svg-icon svg-icon-1">
-          <inline-svg src="/media/icons/duotune/general/gen032.svg" />
-        </span>
-      </div>
-      <!--end::Drawer toggle-->
-    </div>
-    <!--end::Activities-->
-    <!--begin::Notifications-->
-    <div class="app-navbar-item ms-1 ms-lg-3">
-      <!--begin::Menu- wrapper-->
-      <div
-        class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-40px h-md-40px"
-        data-kt-menu-trigger="click"
-        data-kt-menu-attach="parent"
-        data-kt-menu-placement="bottom-end"
-      >
-        <span class="svg-icon svg-icon-1">
-          <inline-svg src="/media/icons/duotune/general/gen022.svg" />
-        </span>
-      </div>
-      <KTNotificationMenu />
-      <!--end::Menu wrapper-->
-    </div>
-    <!--end::Notifications-->
     <!--begin::Chat-->
     <div class="app-navbar-item ms-1 ms-lg-3">
       <!--begin::Menu wrapper-->
@@ -54,23 +18,6 @@
       <!--end::Menu wrapper-->
     </div>
     <!--end::Chat-->
-    <!--begin::Quick links-->
-    <div class="app-navbar-item ms-1 ms-lg-3">
-      <!--begin::Menu wrapper-->
-      <div
-        class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-40px h-md-40px"
-        data-kt-menu-trigger="click"
-        data-kt-menu-attach="parent"
-        data-kt-menu-placement="bottom-end"
-      >
-        <span class="svg-icon svg-icon-1">
-          <inline-svg src="/media/icons/duotune/general/gen025.svg" />
-        </span>
-      </div>
-      <KTQuickLinksMenu />
-      <!--end::Menu wrapper-->
-    </div>
-    <!--end::Quick links-->
     <!--begin::Theme mode-->
     <div class="app-navbar-item ms-1 ms-lg-3">
       <!--begin::Menu toggle-->

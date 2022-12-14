@@ -9,28 +9,6 @@
         'container-xxl': !headerWidthFluid,
       }"
     >
-      <div
-        v-if="layout === 'light-header' || layout === 'dark-header'"
-        class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-15"
-      >
-        <router-link to="/">
-          <img
-            v-if="themeMode === 'light' && layout === 'light-header'"
-            alt="Logo"
-            src="/media/logos/default.svg"
-            class="h-20px h-lg-30px app-sidebar-logo-default"
-          />
-          <img
-            v-if="
-              layout === 'dark-header' ||
-              (themeMode === 'dark' && layout === 'light-header')
-            "
-            alt="Logo"
-            src="/media/logos/default-dark.svg"
-            class="h-20px h-lg-30px app-sidebar-logo-default"
-          />
-        </router-link>
-      </div>
       <!--begin::sidebar mobile toggle-->
       <div
         class="d-flex align-items-center d-lg-none ms-n2 me-2"
@@ -55,10 +33,9 @@
       <!--end::Mobile logo-->
       <!--begin::Header wrapper-->
       <div
-        class="d-flex align-items-stretch justify-content-between flex-lg-grow-1"
+        class="d-flex align-items-stretch justify-content-end flex-lg-grow-1"
         id="kt_app_header_wrapper"
       >
-        <KTHeaderMenu />
         <KTHeaderNavbar />
       </div>
       <!--end::Header wrapper-->

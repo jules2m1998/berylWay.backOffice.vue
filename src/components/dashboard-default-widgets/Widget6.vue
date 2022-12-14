@@ -224,7 +224,7 @@
           <!--begin::Chart-->
           <apexchart
             ref="chartRef2"
-            type="bubble"
+            type="bar"
             :options="chart"
             :series="series2"
             :height="height"
